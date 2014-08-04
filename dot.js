@@ -3,6 +3,8 @@ function Dot() {
   this.x = Math.random() * canvas.width;
   this.intervalX = Math.random()*6-3;
   this.intervalY = Math.random()*6-3;
+  this.onFire = false;
+  this.brightness = 0;
 
   this.update = function() {
     this.x += this.intervalX;
@@ -26,11 +28,8 @@ function Dot() {
 
   this.render = function() {
     ctx.beginPath();
-    ctx.arc(this.x, this.y, 10, 0, (2 * Math.PI))
+    ctx.arc(this.x, this.y, 8, 0, (2 * Math.PI))
     ctx.fillStyle = '#00008b';
     ctx.fill();
-    ctx.lineWidth = 4;
-    ctx.strokeStyle = '#ffff00';
-    ctx.stroke();
   };
-}
+};

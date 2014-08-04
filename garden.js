@@ -1,6 +1,6 @@
 function Garden() {
   var dots = [];
-  var dotCount = 75;
+  var dotCount = 50;
   var minDistance = 100;
   var checkConnectionBetween = function(firstDot, secondDot) {
     var distanceX = secondDot.x - firstDot.x;
@@ -9,7 +9,8 @@ function Garden() {
 
     if (distance < minDistance) {
       ctx.beginPath();
-      ctx.strokeStyle = "rgba(255,255,0,"+(1-distance/minDistance)+")";
+      ctx.lineWidth= 5;
+      ctx.strokeStyle = "rgba(250,250,0,"+(1-distance/minDistance)+")";
       ctx.moveTo(firstDot.x, firstDot.y);
       ctx.lineTo(secondDot.x, secondDot.y);
       ctx.stroke();
@@ -30,7 +31,6 @@ function Garden() {
   this.grow = function() {
     for(i = 0; i < dotCount; i++){
       var dot = new Dot();
-      console.log(dot);
       dot.render();
       dots.push(dot);
     }
