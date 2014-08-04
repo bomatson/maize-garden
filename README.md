@@ -1,6 +1,6 @@
 Maize Garden
 ==========
 
-Using pure JS + canvas!
+A special node garden, made using pure JS + canvas!
 
-![](http://i.gyazo.com/5f0631e1c26705acc8812562601bd9dd.gif)
+![](http://i.gyazo.com/fe32373e6ba7531cf707b63c896f87b5.gif)
